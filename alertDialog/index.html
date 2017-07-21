@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/alertDialog.css" />
+		<style>
+			input{
+				width: 120px;
+				height: 40px;
+				font-size: 18px;
+				margin-right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cont">
+			<input type="button" value="提交success" id="iptBtn1"/>
+			<input type="button" value="提交error" id="iptBtn2"/>
+			<input type="button" value="提交info" id="iptBtn3"/>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="js/alertDialog.js" ></script>
+	<script>
+		$(function(){
+			$("#iptBtn1").on('click',function(){
+				$(this).Mydialog({
+					'height':'250',
+					'width':'360',
+					'msg':'登录成功咯多',
+	        		'icon': 'success'
+				});
+			});
+			
+			$("#iptBtn2").on('click',function(){
+				$(this).Mydialog({
+					'msg':'对不起，出错了',
+	        		'icon': 'error'
+				});
+			});
+			
+			$("#iptBtn3").on('click',function(){
+				$(this).Mydialog({
+					'msg':'提示信息',
+	        		'icon': 'info'
+				});
+			});
+		})
+	</script>
+</html>
